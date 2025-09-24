@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Apertura
+{% endblock %}
+{% load static %}
+
+{% block content %}
+  <main class="col-md-7 p-4">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="{% static 'store/img/card2.jpg' %}" alt="Pizza" />
+          <div class="card-body">
+            <h5 class="card-title">Apertura de tienda</h5>
+            <p class="card-text">Checklist inicial antes de abrir.</p>
+            <a href="{% url 'apertura' %}" class="btn btn-sm btn-success">Complete Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="{% static 'store/img/card1.jpg' %}" class="card-img-top" alt="Burger" />
+          <div class="card-body">
+            <h5 class="card-title">Registro de producción</h5>
+            <p class="card-text">Control de productos preparados.</p>
+            <button class="btn btn-sm btn-success">Complete Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="{% static 'store/img/card4.jpg' %}" class="card-img-top" alt="Sushi" />
+          <div class="card-body">
+            <h5 class="card-title">Control de merma</h5>
+            <p class="card-text">Registro de alimentos al personal.</p>
+            <a href="{% url 'merma' %}" class="btn btn-sm btn-success">Complete Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="{% static 'store/img/card5.jpg' %}" class="card-img-top" alt="Sushi" />
+          <div class="card-body">
+            <h5 class="card-title">Control de calidad</h5>
+            <p class="card-text">Registro de alimentos al personal.</p>
+            <button class="btn btn-sm btn-success">Complete Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="{% static 'store/img/card3.jpg' %}" class="card-img-top" alt="Chicken" />
+          <div class="card-body">
+            <h5 class="card-title">Cierre de tienda</h5>
+            <p class="card-text">Verificación al finalizar el día.</p>
+            <button class="btn btn-sm btn-success">Complete Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="{% static 'store/img/card4.jpg' %}" class="card-img-top" alt="Sushi" />
+          <div class="card-body">
+            <h5 class="card-title">Comida de personal</h5>
+            <p class="card-text">Registro de alimentos al personal.</p>
+            <button class="btn btn-sm btn-success">Complete Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <aside class="col-md-3 p-4">
+    <div class="order-summary">
+      <h5>Indicadores de hoy</h5>
+      <hr />
+      <div class="d-flex justify-content-between">
+        <span>Formularios completados</span> <span>4/6</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <span>Producción</span> <span>120 uds</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <span>Merma</span> <span>5 kg</span>
+      </div>
+      <hr />
+      <button class="btn btn-success w-100">Ver Reporte</button>
+    </div>
+  </aside>
+{% endblock %}

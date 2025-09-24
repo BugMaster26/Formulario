@@ -1,0 +1,326 @@
+{% extends 'base.html' %}
+
+{% block title %}Apertura{% endblock %}
+{% load static %}
+
+{% block content %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checklist Apertura</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header fijo -->
+  <header class="bg-gradient-to-r from-red-600 to-orange-500 text-white p-4 shadow-md sticky top-0 z-50">
+    <h1 class="text-xl font-bold text-center flex items-center justify-center gap-2">
+      📋 Cierre de Tienda
+    </h1>
+  </header>
+
+  <div class="max-w-4xl mx-auto p-4 space-y-6">
+
+    <!-- Datos Generales -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h2 class="text-lg font-semibold flex items-center gap-2 text-gray-700 mb-4">
+        <i data-lucide="user"></i> Datos Generales
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label class="block font-medium">Responsable:</label>
+          <input type="text" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block font-medium">Fecha:</label>
+          <input type="date" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500">
+        </div>
+      </div>
+      <div>
+        <label class="block font-medium">Firma del Responsable:</label>
+        <input type="text" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500">
+      </div>
+    </div>
+
+    <!-- ========== SECCION: Cierre de Salon ========== -->
+  <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-red-100">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="bg-gradient-to-r from-red-50 to-red-100">
+        <th class="py-3 px-4">
+          <div class="flex items-center gap-2 text-red-700 font-bold">
+            <i data-lucide="package" class="w-5 h-5"></i>
+            <span>Cierre de Salón</span>
+          </div>
+        </th>
+        <!-- Aumenté ancho de estas celdas -->
+        <th class="text-center w-36 px-6">
+          <span class="inline-flex items-center gap-1 font-semibold text-gray-700">
+            Sí cumple
+          </span>
+        </th>
+        <th class="text-center w-36 px-6">
+          <span class="inline-flex items-center gap-1 font-semibold text-gray-700">
+            No cumple
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-100">
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se cierran las puertas del local a la hora establecida entre semana </td>
+        <td class="text-center"><input type="radio" name="f1" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="f1" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se deja el salon ordenado para la apertura del dia siguiente</td>
+        <td class="text-center"><input type="radio" name="f2" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="f2" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se verifica que las mesas, pisos y sillas no esten sucios al cierre del turno</td>
+        <td class="text-center"><input type="radio" name="f3" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="f3" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Los baños se dejan limpios en su totalidad: Tasa, espejos, pisos y caños</td>
+        <td class="text-center"><input type="radio" name="f4" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="f4" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se apagan los televisores al cierre de tienda</td>
+        <td class="text-center"><input type="radio" name="f5" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="f5" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se contabilizan los servilleteros para evitar perdidas</td>
+        <td class="text-center"><input type="radio" name="f5" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="f5" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+    <!-- ========== SECCION: Equipo de Fríos y Tabolas Calientes ========== -->
+<div class="bg-white rounded-2xl shadow-md overflow-hidden border border-blue-100">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="bg-gradient-to-r from-blue-50 to-blue-100">
+        <th class="py-3 px-4">
+          <div class="flex items-center gap-2 text-blue-700 font-bold">
+            <i data-lucide="snowflake" class="w-5 h-5"></i>
+            <span>Equipo de Fríos y Tabolas Calientes</span>
+          </div>
+        </th>
+        <th class="text-center w-36 px-6"><span class="font-semibold text-gray-700">Sí cumple</span></th>
+        <th class="text-center w-36 px-6"><span class="font-semibold text-gray-700">No cumple</span></th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-100">
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4"> Todos los equipos de frios se dejan encendidos al termino de labores</td>
+        <td class="text-center"><input type="radio" name="e1" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="e1" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se verifica que los equipos esten correctamente cerrados antes de salir de tienda</td>
+        <td class="text-center"><input type="radio" name="e2" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="e2" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se verifica que la mesa de vapor este apagada de forma correcta</td>
+        <td class="text-center"><input type="radio" name="e3" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="e3" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se verifica que todos los equipos de cocina:planchas, panini y cocinas. Esten apagados</td>
+        <td class="text-center"><input type="radio" name="e4" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="e4" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se verifica la llave del gas cerrado</td>
+        <td class="text-center"><input type="radio" name="e4" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="e4" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ========== SECCION: Mise en Place y Mesas de ensamble ========== -->
+<div class="bg-white rounded-2xl shadow-md overflow-hidden border border-green-100">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="bg-gradient-to-r from-green-50 to-green-100">
+        <th class="py-3 px-4">
+          <div class="flex items-center gap-2 text-green-700 font-bold">
+            <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+            <span>Mise en Place y Mesas de ensamble</span>
+          </div>
+        </th>
+        <th class="text-center w-36 px-6"><span class="font-semibold text-gray-700">Sí cumple</span></th>
+        <th class="text-center w-36 px-6"><span class="font-semibold text-gray-700">No cumple</span></th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-100">
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se guardan todos los vegetales en retenedores de frio</td>
+        <td class="text-center"><input type="radio" name="m1" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="m1" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se saca a descongelar las proteinas para la apertura</td>
+        <td class="text-center"><input type="radio" name="m2" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="m2" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">No se evidencia desorden de los insumos de cocina</td>
+        <td class="text-center"><input type="radio" name="m3" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="m3" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+       <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se cuenta con toda el area de cocina limpia: pisos, equipos, lavadero,etc</td>
+        <td class="text-center"><input type="radio" name="m3" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="m3" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+       <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Las lineas de ensamble se encuentran limpias: Se revisa a profundidad</td>
+        <td class="text-center"><input type="radio" name="m3" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="m3" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+       <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Tolbas de jamaica y maracuya limpias y armadas</td>
+        <td class="text-center"><input type="radio" name="m3" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="m3" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ========== SECCION: Fondo y Cajas ========== -->
+<div class="bg-white rounded-2xl shadow-md overflow-hidden border border-yellow-100">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="bg-gradient-to-r from-yellow-50 to-yellow-100">
+        <th class="py-3 px-4">
+          <div class="flex items-center gap-2 text-yellow-700 font-bold">
+            <i data-lucide="wallet" class="w-5 h-5"></i>
+            <span>Fondo y Cajas</span>
+          </div>
+        </th>
+        <th class="text-center w-36 px-6"><span class="font-semibold text-gray-700">Sí cumple</span></th>
+        <th class="text-center w-36 px-6"><span class="font-semibold text-gray-700">No cumple</span></th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-100">
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se resguarda el dinero en caja fuerte de tienda</td>
+        <td class="text-center"><input type="radio" name="c1" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="c1" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se contabiliza los POS Niubiz de tienda y se dejan cargando</td>
+        <td class="text-center"><input type="radio" name="c2" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="c2" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se deja la caja cuadrada y con los cierres de visa en los folders correspondientes</td>
+        <td class="text-center"><input type="radio" name="c3" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="c3" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se apaga el monitor al cierre de ventas</td>
+        <td class="text-center"><input type="radio" name="c3" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="c3" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se evidencia que todas las luces esten apgadas: letrero, bao, cocina y salon</td>
+        <td class="text-center"><input type="radio" name="c3" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="c3" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ========== SECCION: Fechado y vencimiento de productos ========== -->
+<div class="bg-white rounded-2xl shadow-md overflow-hidden border border-purple-100">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="bg-gradient-to-r from-purple-50 to-purple-100">
+        <th class="py-3 px-4">
+          <div class="flex items-center gap-2 text-purple-700 font-bold">
+            <i data-lucide="store" class="w-5 h-5"></i>
+            <span>Apertura de Salón</span>
+          </div>
+        </th>
+        <th class="text-center w-36 px-6"><span class="font-semibold text-gray-700">Sí cumple</span></th>
+        <th class="text-center w-36 px-6"><span class="font-semibold text-gray-700">No cumple</span></th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-100">
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se desechan los productos que ya se vencieron: dento del turno y productos en almacen</td>
+        <td class="text-center"><input type="radio" name="s1" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="s1" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se fecha los productos que se sacan de mesa y los que se han producido en el día</td>
+        <td class="text-center"><input type="radio" name="s2" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="s2" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">No se evidencia merma guardada ni insumos en mal estado guardados</td>
+        <td class="text-center"><input type="radio" name="s3" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="s3" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Se realiza inventario y se envian los formatos correspondientes al área de logistica</td>
+        <td class="text-center"><input type="radio" name="s4" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="s4" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+        <tr class="hover:bg-gray-50">
+        <td class="py-3 px-4">Productos correctamente guardados y con envases fileados o a presión (tappers)</td>
+        <td class="text-center"><input type="radio" name="s4" class="w-4 h-4 focus:ring-green-500"></td>
+        <td class="text-center"><input type="radio" name="s4" class="w-4 h-4 focus:ring-red-500"></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+
+    <!-- Observaciones -->
+   <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="bg-gradient-to-r from-gray-100 to-gray-200">
+        <th class="py-3 px-4 text-left">
+          <div class="flex items-center gap-2 text-gray-800 font-bold text-lg">
+            <i data-lucide="sticky-note" class="w-5 h-5 text-gray-700"></i>
+            <span>Observaciones</span>
+          </div>
+        </th>
+      </tr>
+    </thead>
+  </table>
+
+  <!-- Cuerpo con el textarea -->
+  <div class="p-4 bg-gray-50">
+    <textarea 
+      class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none" 
+      rows="5" 
+      placeholder="Escribe aquí incidencias o notas..."></textarea>
+  </div>
+</div>
+
+  <!-- Botón flotante Guardar -->
+  <button class="fixed bottom-6 right-6 bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 flex items-center gap-2">
+    <i data-lucide="save"></i> Guardar
+  </button>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+{% endblock %}
